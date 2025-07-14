@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Temperature Monitoring System</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      text-align: center;
+      padding: 50px;
+    }
+    .lcd {
+      background-color: #222;
+      color: #0f0;
+      font-size: 2em;
+      padding: 20px;
+      width: 300px;
+      margin: 20px auto;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #0f0;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 1em;
+      cursor: pointer;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Temperature Monitoring System</h1>
+  <div class="lcd" id="lcdDisplay">--.-- &deg;C</div>
+  <button onclick="readTemperature()">Read Temperature</button>
+
+  <script>
+    function readTemperature() {
+      // Simulate reading temperature from a sensor
+      const temp = (20 + Math.random() * 10).toFixed(2); // e.g., 20.00 - 30.00
+      document.getElementById("lcdDisplay").innerText = temp + " °C";
+    }
+  </script>
+</body>
+</html>
